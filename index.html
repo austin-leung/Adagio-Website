@@ -4,6 +4,8 @@
     <title>Adagio</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="google-signin-client_id" content="405629715288-8k3sait0dfeb9eu399i2opjtn3pib5hp.apps.googleusercontent.com">
+
 
     <link href="https://fonts.googleapis.com/css?family=Work+Sans:300,400,,500,600,700" rel="stylesheet">
 
@@ -27,7 +29,6 @@
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
-
 	  <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
 	    <div class="container">
 	      <a class="navbar-brand adagio" href="index.html">Adagio</a>
@@ -41,6 +42,7 @@
 	          <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
 	          <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
 	          <li class="nav-item cta"><a href="contact.html" class="nav-link"><span>Get started</span></a></li>
+            <div class="g-signin2" data-onsuccess="onSignIn"></div>
 	        </ul>
 	      </div>
 	    </div>
@@ -339,6 +341,26 @@
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
   <script src="js/google-map.js"></script>
   <script src="js/main.js"></script>
+  <script src="https://apis.google.com/js/platform.js" async defer></script>
+  <script>
+    function onSuccess(googleUser) {
+      console.log('Logged in as: ' + googleUser.getBasicProfile().getName());
+    }
+    function onFailure(error) {
+      console.log(error);
+    }
+    function renderButton() {
+      gapi.signin2.render('my-signin2', {
+        'scope': 'profile email',
+        'width': 240,
+        'height': 50,
+        'longtitle': true,
+        'theme': 'dark',
+        'onsuccess': onSuccess,
+        'onfailure': onFailure
+      });
+    }
+  </script>
 
   </body>
 </html>
