@@ -10213,7 +10213,7 @@ textarea.form-control {
     color: #f51701;
   }
 
-.welcome {
+#welcome {
   margin-left: 20px;
   margin-top: 6px;
 }
@@ -10226,7 +10226,7 @@ textarea.form-control {
     margin-bottom: -80px;
   }
 
-  .g-signin2 {
+  .signinBtn {
     margin-left: 10px;
     margin-right: 10px;
     margin-top: 5px;
