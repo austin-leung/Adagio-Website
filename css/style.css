@@ -3528,7 +3528,9 @@ input[type="button"].btn-block {
 
 .nav-link {
   display: block;
-  padding: 0.5rem 1rem; }
+  padding: 0.5rem 1rem;
+  border-right: 10px;
+}
   .nav-link:hover, .nav-link:focus {
     text-decoration: none; }
   .nav-link.disabled {
@@ -8342,12 +8344,12 @@ h1, h2, h3, h4, h5,
       position: relative;
       top: 0; } }
   .ftco-navbar-light .navbar-brand {
-    color: #000; }
+    color: #37bedb; }
     .ftco-navbar-light .navbar-brand:hover {
-      color: #000; }
+      color: #37bedb; }
     @media (max-width: 991.98px) {
       .ftco-navbar-light .navbar-brand {
-        color: #fff; } }
+        color: #37bedb; }}
   @media (max-width: 991.98px) {
     .ftco-navbar-light .navbar-nav {
       padding-bottom: 10px; } }
@@ -8400,7 +8402,8 @@ h1, h2, h3, h4, h5,
           display: none; } }
   .ftco-navbar-light .navbar-nav > .nav-item.cta > a {
     color: #fff;
-    border: 1px solid #6927ff;
+    border: 2px solid #fff;
+    margin-left: 11px;
     padding-top: .5rem;
     padding-bottom: .5rem;
     padding-left: 20px;
@@ -8417,7 +8420,7 @@ h1, h2, h3, h4, h5,
     .ftco-navbar-light .navbar-nav > .nav-item.cta > a:hover {
       color: #fff;
       background: #6927ff;
-      border: 1px solid #6927ff; }
+      border: 2px solid #6927ff; }
   .ftco-navbar-light .navbar-nav > .nav-item.cta.cta-colored a {
     border: 1px solid #38d39f;
     background: #38d39f !important; }
@@ -10210,9 +10213,10 @@ textarea.form-control {
     color: #f51701;
   }
 
-  .adagio {
-    color: #37bedb
-  }
+.welcome {
+  margin-left: 20px;
+  margin-top: 6px;
+}
 
   .full {
     width: 100%;
