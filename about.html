@@ -25,6 +25,9 @@
     <link rel="stylesheet" href="css/flaticon.css">
     <link rel="stylesheet" href="css/icomoon.css">
     <link rel="stylesheet" href="css/style.css">
+
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+
   </head>
   <body>
 
@@ -41,6 +44,8 @@
 	          <li class="nav-item active"><a href="about.html" class="nav-link">About</a></li>
 	          <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
 	          <li class="nav-item cta"><a href="contact.html" class="nav-link"><span>Get started</span></a></li>
+            <li class="nav-item signinBtn"><div class="g-signin2 nav-link" data-onsuccess="onSignIn"></div></li>
+            <li class= "nav-item cta"><a href="#" onclick="signOut();" class="nav-link">Sign out</a></li>
 	        </ul>
 	      </div>
 	    </div>
@@ -152,6 +157,7 @@
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
   <script src="js/google-map.js"></script>
   <script src="js/main.js"></script>
+  <script src="js/scripts.js"></script>
 
   </body>
 </html>
