@@ -8,9 +8,21 @@ function onSignIn(googleUser) {
 }
 
 function signOut() {
-    var auth2 = gapi.auth2.getAuthInstance();
-    auth2.signOut().then(function () {
-      console.log('User signed out.');
-    });
-    document.getElementById("welcome").innerHTML = '';
-  }
+  var auth2 = gapi.auth2.getAuthInstance();
+  auth2.signOut().then(function () {
+    console.log('User signed out.');
+  });
+  document.getElementById("welcome").innerHTML = '';
+}
+
+var Acuity = require('acuityscheduling');
+
+var acuity = Acuity.basic({
+  userId: 18048999,
+  apiKey: '4afe4805445385afe793ccdd3d5b5f78 '
+});
+
+acuity.request('appointments', function (err, res, appointments) {
+  if (err) return console.error(err);
+  console.log(appointments);
+});
