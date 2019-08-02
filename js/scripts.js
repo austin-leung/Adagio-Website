@@ -1,4 +1,4 @@
-var signedIn = false;
+	sessvars.signInInfo = {signedIn: false}
 
 function onSignIn(googleUser) {
   var profile = googleUser.getBasicProfile();
@@ -7,7 +7,8 @@ function onSignIn(googleUser) {
   console.log('Image URL: ' + profile.getImageUrl());
   console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
   document.getElementById("welcome").innerHTML = 'Hi, ' + profile.getName();
-  signedIn = true;
+  sessvars.signInInfo.signedIn = true;
+  console.log(sessvars.signInInfo.signedIn)
 }
 
 function signOut() {
@@ -16,7 +17,8 @@ function signOut() {
     console.log('User signed out.');
   });
   document.getElementById("welcome").innerHTML = '';
-  signedIn = false;
+  sessvars.signInInfo.signedIn = false;
+  console.log(sessvars.signInInfo.signedIn)
 }
 
 
