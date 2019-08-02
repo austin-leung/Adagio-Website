@@ -19,7 +19,18 @@ function signOut() {
   signedIn = false;
 }
 
+document.getElementById("calend").onload = function() {
+  console.log('hi');
+  learnText();
+};
+
+window.onload = function() {
+ alert("let's go!");
+}
+
 function learnText() {
+  console.log("loaded");
+  console.log(signedIn);
   if (signedIn) {
     console.log("Signed in!");
     document.getElementById("calend").innerHTML = '''
