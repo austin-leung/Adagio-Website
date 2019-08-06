@@ -1,3 +1,21 @@
+<?php
+
+if($_POST["submit"]) {
+    $recipient="austinle@cs.cmu.edu";
+    $subject=$_POST["subject"];
+    $sender=$_POST["sender"];
+    $senderEmail=$_POST["senderEmail"];
+    $message=$_POST["message"];
+
+    $mailBody="Name: $sender\nEmail: $senderEmail\n\n$message";
+
+    mail($recipient, $subject, $mailBody, "From: $sender <$senderEmail>");
+
+    $thankYou="<p>Thank you! Your message has been sent.</p>";
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -89,6 +107,9 @@
         </div>
         <div class="row block-9">
           <div class="col-md-6 pr-md-5">
+
+            <?=$thankYou ?>
+
             <form method="post" action="contact.php">
               <div class="form-group">
                 <input type="text" class="form-control" name="sender" placeholder="Your Name">
