@@ -10233,3 +10233,19 @@ textarea.form-control {
   text-align: center;
   padding: 50px;
 }
+
+.staff .img {
+    height: 320px;
+}
+
+.ftco-social {
+    padding: 0;
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+
+.ftco-social li {
+    list-style: none;
+    margin-right: 10px;
+}
